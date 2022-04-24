@@ -1,6 +1,5 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
+
 import Banner from '../components/Banner'
 import Header from '../components/Header'
 import Row from '../components/Row'
@@ -39,10 +38,13 @@ const Home = ({
       <main className="relative pl-4 pb-24 lg:space-y-24 lg:pl-16">
         <Banner netflixOriginals={netflixOriginals} />
         <section>
-          <Row />
-          <Row />
-          <Row />
-          <Row />
+          <Row title="Trending Now" movies={trendingNow} />
+          <Row title="Top Rated" movies={topRated} />
+          <Row title="Action" movies={actionMovies} />
+          <Row title="Comedy" movies={comedyMovies} />
+          <Row title="Horror" movies={horrorMovies} />
+          <Row title="Romance" movies={romanceMovies} />
+          <Row title="Documentaries" movies={documentaries} />
         </section>
       </main>
       {/* modal */}
